@@ -1,4 +1,5 @@
 function hello() {
+    /*
     str1 = "121212"
     str2 = "asjdkasjdk"
     console.log("Hello node"+str1+str2);
@@ -65,9 +66,7 @@ function hello() {
     }while(i<10)
     console.log(i)
     //반복문 while
-    
-    
-    
+    */
 /*
 함수
 함수를 선언할 때는 function 이라는 키워드를 사용하며 
@@ -80,9 +79,29 @@ function hello() {
     }
     
     var add = sum;
-    add(3,3);
-    
+    console.log(add(3,3));
 }
+
+ 
+  function one() {
+    return 555;
+  }
+  
+  var two = function () {
+    return 333;
+  }
+  
+  function invoke_and_add(a, dd) {
+    return a() + dd();
+  }
+  
+  console.log(invoke_and_add(one, two));
+  // 3
+
+
+
+
+
 
 hello();
 
