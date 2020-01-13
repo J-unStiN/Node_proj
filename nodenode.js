@@ -59,3 +59,22 @@ fs.readFile('test_txt.txt', 'utf8', function(err, data) { // 존재하지 않는
         console.log(data); // 읽기 성공
     }
 });
+
+/*
+이벤트 생성(이벤트 핸들러 연결)
+이벤트를 추가하려면, emitter에 이벤트를 연결할 객체, event에 이벤트 이름,
+listener에 이벤트 핸들러를 작성하면 됩니다.
+addlistener() 메소드와 on() 메소드는 서로 같으니
+둘 중 익숙한 것을 사용하면 됩니다. 
+*/
+
+var EventEmitter = require('events');   // 이벤트 메소드
+var custom_event = new EventEmitter();  
+
+custom_event.on('call', function() {   //이벤트 생성 메소드
+	console.log('이벤트 콜');
+});
+
+custom_event.emit('call');  // 이벤트발생
+
+custom_event.removeAllListeners();  // 이벤트 제거
