@@ -78,3 +78,28 @@ custom_event.on('call', function() {   //이벤트 생성 메소드
 custom_event.emit('call');  // 이벤트발생
 
 custom_event.removeAllListeners();  // 이벤트 제거
+
+
+
+/*노드js 에서는 상속을 util모듈의 
+util.inherits() 메소드를 통해 쉽게 상속을 할 수 있다.
+*/
+
+var util = require('util');  // util모듈 사용
+
+function foo() {
+    
+}
+
+function Bar() {
+}
+
+util.inherits(Bar, Foo); // 첫번째 인자가 두번째 인자를 상속받음
+
+Bar.prototype.baz = function() {
+	console.log('Bar_baz 실행');
+};
+
+Foo.prototype.bar();
+Bar.prototype.bar();
+Bar.prototype.baz();
