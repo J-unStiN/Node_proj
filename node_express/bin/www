@@ -8,10 +8,10 @@ var app = require('../app');
 var debug = require('debug')('node-express:server');
 var http = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
 
+
+
+// 포트번호 설정
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
