@@ -11,7 +11,7 @@ var app = express(); // 이걸로 웹서버의 특징 기술함
 
 // 웹 서버의 특징을 기술
 app.set('views', path.join(__dirname, 'views')); // 화면 출력을 담당하는 부분, views폴더로 지정
-app.set('view engine', 'jade'); // 기본엔진 설정 
+app.set('view engine', 'pug'); // 기본엔진 설정 
 
 app.use(logger('dev'));
 app.use(express.json());
